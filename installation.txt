@@ -23,6 +23,8 @@ ouvrir le powershell admin et remettre la restriction de fichier .ps1 =
 //////////////////INSTALLATION PAQUET DANS LE VENV///////////////////////
 ---NOUS SOMMES DESORMAIS DANS LE VIRTUALENVIRONMENT(ou venv)---
 
+installer un microframework idéal pour des API microservices
+• "pip install flask"
 installer freeze qui enregistre les dépendances = 
 • "pip freeze"
 mettre toutes les dépendances enregistrés sur le venv dans le requirements.txt de manière automatique= 
