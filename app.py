@@ -1,4 +1,3 @@
-from tkinter import ACTIVE
 from flask import Flask, render_template, make_response, jsonify, request
 
 app = Flask(__name__)
@@ -104,6 +103,6 @@ def delete_collection(collection):
 
 if __name__ == "__main__":
     print("Server running in port", PORT)
-    app.run(host=HOST, port=PORT, debug=ACTIVE)
+    app.run(host=HOST, port=PORT, debug=True)
 
 
