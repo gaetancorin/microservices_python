@@ -1,0 +1,3 @@
+dans le terminal "python app.py" ou "flask run" pour lancer app.py
+
+Il est important d'avoir " if __name__ == "__main__": " sous les endpoint

@@ -15,7 +15,9 @@ https://docs.microsoft.com/fr-fr/powershell/module/microsoft.powershell.core/abo
 
 activer l'environement virtuel=
 • "docker-flask/Scripts/activate"(windows)
-• "source docker-flask/bin/activate"(linux) 
+• "source docker-flask/bin/activate"(linux)
+fermer l'environeùent virtuel=
+• "deactivate 
 
 ouvrir le powershell admin et remettre la restriction de fichier .ps1 = 
 • "Set-ExecutionPolicy Restricted"
@@ -29,3 +31,5 @@ installer freeze qui enregistre les dépendances =
 • "pip freeze"
 mettre toutes les dépendances enregistrés sur le venv dans le requirements.txt de manière automatique= 
 • "pip freeze > requirements.txt"
+Lancer l'applciation flask avec le terminal
+• "flask run" 
