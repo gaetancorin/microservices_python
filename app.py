@@ -2,7 +2,7 @@ from flask import Flask, render_template, make_response, jsonify, request
 
 app = Flask(__name__)
 
-HOST= "127.0.0.1"
+HOST= "0.0.0.0"
 PORT = 3200
 
 INFO = {

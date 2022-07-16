@@ -17,7 +17,7 @@ activer l'environement virtuel=
 • "docker-flask/Scripts/activate"(windows)
 • "source docker-flask/bin/activate"(linux)
 fermer l'environeùent virtuel=
-• "deactivate 
+• "deactivate"
 
 ouvrir le powershell admin et remettre la restriction de fichier .ps1 = 
 • "Set-ExecutionPolicy Restricted"
