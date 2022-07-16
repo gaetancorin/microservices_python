@@ -20,10 +20,14 @@ activer l'environement virtuel=
 ouvrir le powershell admin et remettre la restriction de fichier .ps1 = 
 • "Set-ExecutionPolicy Restricted"
 
-//////////////////INSTALLATION PAQUET DANS LE VENV///////////////////////
+//////////////////INSTALLATION PAQUETS DANS LE VENV///////////////////////
 ---NOUS SOMMES DESORMAIS DANS LE VIRTUALENVIRONMENT(ou venv)---
 
-installer freeze qui enregistre les dépendances = 
+Flask est un microframework idéal pour des petites API(microservices)
+• pip install flask
+
+Freeze est un paquet native de python qui permet de voir les dépendances installer
+voir les dépendances installer dans le venv avec freeze = 
 • "pip freeze"
-mettre toutes les dépendances enregistrés sur le venv dans le requirements.txt de manière automatique= 
+crée/Met à jour le fichier requirements.txt en comparant avec les dépendances enregistrer de freeze =
 • "pip freeze > requirements.txt"
