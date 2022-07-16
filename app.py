@@ -74,6 +74,8 @@ def create_collection(collection):
     return res
 
 # //////////////     METHODE PUT    /////////////////////////
+# recoit un json {"new":<elementModifié>} par la methode PUT, 
+# puis modifie le membre de la collection passé par l'url
 @app.route('/json/<collection>/<member>', methods=["PUT"])
 def update_collection(collection, member):
     req = request.get_json()
@@ -83,6 +85,17 @@ def update_collection(collection, member):
             res = make_response(jsonify({ "res":INFO[collection]}), 200)
             return res
         res = make_response(jsonify({ "error":"member not found"}), 400)
+        return res
+    res = make_response(jsonify({ "error":"collection not found"}), 400)
+    return res
+
+# //////////////     METHODE DEL    /////////////////////////
+# supprime la collection passé en url par la méthode DELETE
+@app.route('/json/<collection>', methods=["DELETE"])
+def delete_collection(collection):
+    if collection in INFO:
+        del INFO[collection]
+        res = make_response(jsonify(INFO), 200)
         return res
     res = make_response(jsonify({ "error":"collection not found"}), 400)
     return res
