@@ -19,17 +19,17 @@ activer l'environement virtuel=
 fermer l'environeùent virtuel=
 • "deactivate"
 
-ouvrir le powershell admin et remettre la restriction de fichier .ps1 = 
+powershell admin et remettre la restriction de fichier .ps1 = 
 • "Set-ExecutionPolicy Restricted"
 
 //////////////////INSTALLATION PAQUET DANS LE VENV///////////////////////
----NOUS SOMMES DESORMAIS DANS LE VIRTUALENVIRONMENT(ou venv)---
+---DANS LE VIRTUAL ENVIRONMENT(ou venv)---
 
-installer un microframework idéal pour des API microservices
+installation microframework Flask idéal pour API microservices
 • "pip install flask"
-installer freeze qui enregistre les dépendances = 
+installation freeze qui enregistre les dépendances = 
 • "pip freeze"
-mettre toutes les dépendances enregistrés sur le venv dans le requirements.txt de manière automatique= 
+mettre toutes les dépendances enregistrés sur le venv dans le requirements.txt= 
 • "pip freeze > requirements.txt"
 Lancer l'applciation flask avec le terminal
-• "flask run" 
+• "python app.py" ou "flask run" 
