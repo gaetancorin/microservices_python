@@ -27,7 +27,7 @@ powershell admin et remettre la restriction de fichier .ps1 =
 
 installation microframework Flask idéal pour API microservices
 • "pip install flask"
-installation freeze qui enregistre les dépendances = 
+voir les dépendances avec freeze= 
 • "pip freeze"
 mettre toutes les dépendances enregistrés sur le venv dans le requirements.txt= 
 • "pip freeze > requirements.txt"

@@ -1,13 +1,34 @@
-• virtualenv -p python3 docker-flask    créer venv
-• docker-flask/Scripts/activate         activer venv
-• pip install flask                     installer flask
+créer l'environnement virtuel= 
+• virtualenv -p python3 <nomEnvironnement>
 
-• pip install flask_pymongo         installe pymongo qui connecte a mongoDb
-• pip install dnspython        installe connection dns indispensable pour pymongo
+ouvrir le powershell administrateur et enlever la restriction de fichier .ps1=
+https://docs.microsoft.com/fr-fr/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2
+• "Set-ExecutionPolicy RemoteSigned" enlever
+• "Set-ExecutionPolicy Restricted"   remettre
+
+activer l'environement virtuel=
+• "flask_db/Scripts/activate"(windows)
+• "source flask_db/bin/activate"(linux)
+fermer l'environeùent virtuel=
+• "deactivate"
+
+//////////////////INSTALLATION PAQUETS DANS LE VENV///////////////////////
+installation microframework Flask idéal pour API microservices
+• pip install flask
+Installation flask_pymongo qui connecte flask a mongoDb
+• pip install flask_pymongo
+Installation indispensable pour faire marcher pymongo         
+• pip install dnspython        
+voir les dépendances avec freeze= 
+• pip freeze
+mettre toutes les dépendances enregistrés sur le venv dans le requirements.txt= 
 • pip freeze > requirements.txt
 
-• python app.py
+Lancer l'applciation flask avec le terminal
+• "python app.py" ou "flask run"
 
 explication connection mongoDb avec pymongo:https://medium.com/@summerxialinqiao/connect-flask-app-to-mongodb-atlas-using-pymongo-328e119a7bd8
 explication CRUD avec pymongo:
 https://www.mongodb.com/compatibility/setting-up-flask-with-mongodb
+video requete avec pymongo:
+https://www.youtube.com/watch?v=rE_bJl2GAY8

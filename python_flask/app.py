@@ -18,17 +18,17 @@ INFO = {
     }
 }
 # ///////////////   METHODE GET   //////////////////
-# envois du code html
+# return du code html
 @app.route("/")
 def home():
     return "<h1 style='color:blue;'>Bienvenue sur la page home</h1>", 200
 
-# envois un template html
+# return un template html
 @app.route('/template')
 def template():
     return render_template('index.html')
 
-# recoit en req get des informations dans l'url et envois une res un json
+# recoit en req get des informations dans l'url et le transforme en une res json
 @app.route('/qstring')
 def query_string():
     if request.args:
