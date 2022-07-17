@@ -30,5 +30,32 @@ Lancer l'applciation flask avec le terminal
 explication connection mongoDb avec pymongo:https://medium.com/@summerxialinqiao/connect-flask-app-to-mongodb-atlas-using-pymongo-328e119a7bd8
 explication CRUD avec pymongo:
 https://www.mongodb.com/compatibility/setting-up-flask-with-mongodb
-video requete avec pymongo:
+video exemples de requetes avec pymongo:
 https://www.youtube.com/watch?v=rE_bJl2GAY8
+//////////////////////////
+fonctions d'interactions de mongoDb avec pymongo:
+
+récupère un enregistrement(renvois directement un dictio)
+• .find_one({"name":"gaetan"})
+récupère un enregistrement(renvois un objet à itéré pour transformer en dictio)
+• .find({"name":"gaetan"})
+récupère tous les enregistrements(renvois objet à itéré pour transformer en dictio)
+• .find({})
+ajoute un enregistrement
+• .insert_one({"name": "gaetan", "age": 27})
+ajoute plusieurs enregistrements
+• .insert_many([{"name": "gaetan"}, {"name": "francky"}])
+
+modifie un enregistrement(doc update opérateurs:) {selecteur}{nouvelElement}
+https://www.mongodb.com/docs/manual/reference/operator/update/
+• .update_one({"name":"gaetan"}, {"$set":{"age":28}})
+
+supprimer un enregistrement
+• .delete_one({"name":"gaetan"})
+supprime plusieurs enregistrements
+• .delete_many({"name":""})
+supprimer toute la bdd
+• .delete_many({})
+
+compte les enregistrements
+• .count_documents({})
