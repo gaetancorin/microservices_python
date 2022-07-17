@@ -47,7 +47,7 @@ def send_json():
     res = make_response(jsonify(INFO), 200)
     return res
 
-# recherche dans INFO la collection demander, vérifie que le membre exists(key), et res le json du membre
+# recherche dans INFO la collection demander, vérifie que le membre existes, et res le json du membre
 @app.route('/json/<collection>/<member>')
 def get_data(collection, member):
     if collection in INFO:

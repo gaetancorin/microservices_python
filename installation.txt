@@ -1,4 +1,4 @@
-(• alt+7)
+(• alt+7)  https://www.youtube.com/watch?v=XRA1jI7jx5k
 /////////////INSTALLATION ENVIRONNEMENT VIRTUEL///////////////
 
 avoir python3 --version
