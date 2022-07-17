@@ -18,19 +18,19 @@ INFO = {
     }
 }
 # ///////////////   METHODE GET   //////////////////
-# return du code html
+# SEND HTML
 @app.route("/")
-def home():
+def sendHtml():
     return "<h1 style='color:blue;'>Bienvenue sur la page home</h1>", 200
 
-# return un template html
-@app.route('/template')
-def template():
+# SEND TEMPLATE
+@app.route('/template/')
+def sendTemplate():
     return render_template('index.html')
 
-# recoit en req get des informations dans l'url et le transforme en une res json
+# QUERYSTRING TO JSON
 @app.route('/qstring')
-def query_string():
+def querystringToJson():
     if request.args:
         req = request.args
         res = {}
@@ -41,15 +41,15 @@ def query_string():
     res = make_response(jsonify({ "error":"No query string"}), 400)
     return res
 
-# envois la variable INFO qui contient un dictionnaire qui sera jsonify
+# SEND ALL JSON
 @app.route('/json')
-def send_json():
+def sendAllJson():
     res = make_response(jsonify(INFO), 200)
     return res
 
-# recherche dans INFO la collection demander, vérifie que le membre existes, et res le json du membre
+#  READ ONE MEMBER
 @app.route('/json/<collection>/<member>')
-def get_data(collection, member):
+def sendOneMember(collection, member):
     if collection in INFO:
         member = INFO[collection].get(member)
         if member:
@@ -61,9 +61,10 @@ def get_data(collection, member):
     return res
         
 # //////////////     METHODE POST     /////////////////////////
-# recoit la collection par l'url, les key:valeurs par la méthode post, et si la collection n'existe pas, les rajoute dans la variable INFO
+# get collection name by url and members names by json and create it
+# CREATE COLLECTION
 @app.route('/json/<collection>', methods=["POST"])
-def create_collection(collection):
+def createCollection(collection):
     req = request.get_json()
     if collection in INFO:
         res = make_response(jsonify({ "error":"collection exists"}), 400)
@@ -73,10 +74,10 @@ def create_collection(collection):
     return res
 
 # //////////////     METHODE PUT    /////////////////////////
-# recoit un json {"new":<elementModifié>} par la methode PUT, 
-# puis modifie le membre de la collection passé par l'url
+# get collection and member by url, new member value is get by Json
+# UPDATE MEMBER
 @app.route('/json/<collection>/<member>', methods=["PUT"])
-def update_collection(collection, member):
+def updateMember(collection, member):
     req = request.get_json()
     if collection in INFO:
         if member:
@@ -89,9 +90,9 @@ def update_collection(collection, member):
     return res
 
 # //////////////     METHODE DEL    /////////////////////////
-# supprime la collection passé en url par la méthode DELETE
+# get collection by url, and delete it
 @app.route('/json/<collection>', methods=["DELETE"])
-def delete_collection(collection):
+def deleteCollection(collection):
     if collection in INFO:
         del INFO[collection]
         res = make_response(jsonify(INFO), 200)
