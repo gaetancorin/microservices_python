@@ -41,7 +41,7 @@ def querystringToJson():
     res = make_response(jsonify({ "error":"No query string"}), 400)
     return res
 
-# SEND ALL JSON
+# SEND ALL COLLECTIONS BY JSON
 @app.route('/json')
 def sendAllJson():
     res = make_response(jsonify(INFO), 200)

@@ -1,7 +1,0 @@
-lancer le front = 
-npm run start
-http://localhost:4200/
-
-lancer le back = 
-python app.py
-http://localhost:3000/

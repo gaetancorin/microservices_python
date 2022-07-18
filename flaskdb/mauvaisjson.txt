@@ -1,0 +1,36 @@
+
+[
+  {
+    "_id": {
+      "$oid": "62d160f026390d75d7c52c48"
+    },
+    "title": "appareil photo",
+    "description": "de tr\u00e8s haute qualit\u00e9",
+    "imageUrl": "https://cdn.pixabay.com/photo/2019/06/11/18/56/camera-4267692_1280.jpg",
+    "userId": "userID40282382",
+    "price": 25000,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "62d16b7730c71e3633ba84f8"
+    },
+    "title": "croissant",
+    "description": "un croissant au beurre",
+    "imageUrl": "https://auxmerveilleux.com/city/440/croissant.jpg",
+    "userId": "userID40282382",
+    "price": 500,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "62d3d26be088f7a3b07c0d7a"
+    },
+    "title": "nouille chinoise",
+    "description": "vendu avec les baguettes et une serviette",
+    "imageUrl": "https://cdn.pratico-pratiques.com/app/uploads/sites/2/2021/04/07125035/nouilles-chinoises-aux-edamames.jpg",
+    "userId": "userID40282382",
+    "price": 1050,
+    "__v": 0
+  }
+]
