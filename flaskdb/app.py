@@ -5,38 +5,51 @@ from bson.json_util import dumps, loads
 app = Flask(__name__)
 HOST= "0.0.0.0"
 PORT = 3000
-# création de l' api connecté au front
+
 # reçoit une req GET, envoi en res toute la collection.
-@app.route("/api/stuff")
+@app.route("/getAll", methods=["GET"])
+def getAll():
+    Cursor = db.collection.find({})
+    res = []
+    for i in Cursor:
+        res.append(i)
+    for i in range(len(res)):
+        res[i]["_id"] = str(res[i]["_id"])
+    print(res, "\n")
+    res = make_response(jsonify(res), 200)
+    return res
 # def allCollection():
 #     Cursor = db.collection.find({})
-#     res = []
-#     for i in Cursor:
-#         res.append(i)
-#     for i in range(len(res)):
-#         res[i]["_id"] = str(res[i]["_id"])
-#     print(res, "\n")
-#     res = make_response(jsonify(res), 200)
+#     malist = list(Cursor)
+#     print(malist)
+#     res = make_response(dumps(malist), 200)
 #     return res
-def allCollection():
-    Cursor = db.collection.find({})
-    malist = list(Cursor)
-    print(malist)
-    res = make_response(dumps(malist), 200)
-    return res
-
-
-
-        # res = {}
-    # for key, value in req:
-    #     res[key] = value
-
 
 #test to insert data to the data base
-@app.route("/test")
-def test():
-    db.collection.insert_one({"name": "bogosse"})
+@app.route("/createOne", methods=["POST"])
+def createOne():
+    req = request.get_json()
+    res = {"title": req["title"]}
+    print(res)
+    # db.collection.insert_one({"name": "bogosse"})
     return "Connected to the data base!"
+
+
+#     title
+# :
+# "appareil photo"
+# description
+# :
+# "de très haute qualité"
+# imageUrl
+# :
+# "https://cdn.pixabay.com/photo/2019/06/11/18/56/camera-4267692_1280.jpg"
+# userId
+# :
+# "userID40282382"
+# price
+# :
+# 24000
 
 @app.route('/')
 def flask_mongodb_atlas():

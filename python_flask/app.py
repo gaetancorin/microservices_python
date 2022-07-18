@@ -101,7 +101,7 @@ def deleteCollection(collection):
     return res
 
 
-
+# Il est important d'avoir " if __name__ == "__main__": " sous les endpoints
 if __name__ == "__main__":
     print("Server running in port", PORT)
     app.run(host=HOST, port=PORT, debug=True)

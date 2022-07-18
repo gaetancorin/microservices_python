@@ -1,39 +1,37 @@
-(• alt+7)  https://www.youtube.com/watch?v=XRA1jI7jx5k
 /////////////INSTALLATION ENVIRONNEMENT VIRTUEL///////////////
-
 avoir python3 --version
     pip3 --version
     virtualenv --version
     (virtualenv permet de créer un environnement virtuel avec des installations de paquets python indépendant du pc host.)
 
 créer l'environnement virtuel= 
-• "virtualenv -p python3 docker-flask"
+• virtualenv -p python3 <nomEnvironnement>
 
 ouvrir le powershell administrateur et enlever la restriction de fichier .ps1=
-• "Set-ExecutionPolicy RemoteSigned" 
 https://docs.microsoft.com/fr-fr/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2
-Attention: On ne peut pas déplacer le docker-flask sur windows
+• "Set-ExecutionPolicy RemoteSigned" enlever
+• "Set-ExecutionPolicy Restricted"   remettre
 
 activer l'environement virtuel=
-• "docker-flask/Scripts/activate"(windows)
-• "source docker-flask/bin/activate"(linux)
+• "flaskdb2/Scripts/activate"(windows)
+• "source flask_db/bin/activate"(linux)
 fermer l'environeùent virtuel=
 • "deactivate"
 
-powershell admin et remettre la restriction de fichier .ps1 = 
-• "Set-ExecutionPolicy Restricted"
-
-//////////////////INSTALLATION PAQUET DANS LE VENV///////////////////////
----DANS LE VIRTUAL ENVIRONMENT(ou venv)---
-
+//////////////////INSTALLATION PAQUETS DANS LE VENV///////////////////////
 installation microframework Flask idéal pour API microservices
-• "pip install flask"
+• pip install flask
+Installation mongoengine qui connecte flask a mongoDb
+• pip install mongoengine
+Installation indispensable pour faire marcher mongoengine         
+• pip install dnspython       
 voir les dépendances avec freeze= 
-• "pip freeze"
+• pip freeze
 mettre toutes les dépendances enregistrés sur le venv dans le requirements.txt= 
-• "pip freeze > requirements.txt"
+• pip freeze > requirements.txt
+
 Lancer l'applciation flask avec le terminal
-• "python app.py" ou "flask run" 
+• "python app.py" ou "flask run"
 
 
 //////// DOCKER ////////

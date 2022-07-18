@@ -1,6 +1,0 @@
-dans le terminal "python app.py" ou "flask run" pour lancer app.py
-
-Il est important d'avoir " if __name__ == "__main__": " sous les endpoints
-
-Attention: On ne peut pas déplacer le docker-flask sur windows:
-Fatal error in launcher: Unable to create process using '"C:\Users\gaeta\Desktop\microservices_python\docker-flask\Scripts\python.exe"  "C:\Users\gaeta\Desktop\microservices_python\docker_flask\docker-flask\Scripts\pip.exe" freeze': Le fichier spÚcifiÚ est introuvable.
