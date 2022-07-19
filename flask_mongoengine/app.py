@@ -1,10 +1,9 @@
-
 from flask import Flask, render_template, make_response, jsonify, request
 from mongoengine import connect
 from models import Drink
 from bson.json_util import dumps, loads
 
-connect("flaskdb2",host="mongodb+srv://gaetan:1234@cluster0.wxcxg.mongodb.net/?retryWrites=true&w=majority")
+connect("flask_mongoengine",host="mongodb+srv://gaetan:1234@cluster0.wxcxg.mongodb.net/?retryWrites=true&w=majority")
 
 app = Flask(__name__)
 HOST= "0.0.0.0"

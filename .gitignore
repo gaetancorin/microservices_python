@@ -1,2 +1,4 @@
 flaskdb/__pycache__/
+flaskdb2/__pycache__/
+flask_mongoengine/__pycache__/
 frontend

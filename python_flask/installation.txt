@@ -10,7 +10,8 @@ créer l'environnement virtuel=
 • "virtualenv -p python3 docker-flask"
 
 ouvrir le powershell administrateur et enlever la restriction de fichier .ps1=
-• "Set-ExecutionPolicy RemoteSigned" 
+• "Set-ExecutionPolicy RemoteSigned"  ouvrir
+• "Set-ExecutionPolicy Restricted"   fermer
 https://docs.microsoft.com/fr-fr/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2
 Attention: On ne peut pas déplacer le docker-flask sur windows
 
@@ -19,9 +20,6 @@ activer l'environement virtuel=
 • "source docker-flask/bin/activate"(linux)
 fermer l'environeùent virtuel=
 • "deactivate"
-
-powershell admin et remettre la restriction de fichier .ps1 = 
-• "Set-ExecutionPolicy Restricted"
 
 //////////////////INSTALLATION PAQUET DANS LE VENV///////////////////////
 ---DANS LE VIRTUAL ENVIRONMENT(ou venv)---
@@ -41,3 +39,7 @@ docker ps -a
 docker image ls
 docker start
 docker stop
+constuire l'image:
+docker build -t <nomDeLImage> .
+créer le container avec une image:
+docker run -d -p 3200:3200 --name <nomcontainer> <nomimage> 

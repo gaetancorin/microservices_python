@@ -1,0 +1,19 @@
+
+{
+    "title": "cafe",
+    "price": 250,
+    "description": "une boisson pour les grosses fatigues",
+    "imageUrl": "https://www.centromedicomanzanera.com/wp-content/uploads/2022/04/CAFE-Y-REPRODUCCION.jpg"
+}
+{
+    "title": "camomille nuit tranquille",
+    "price": 350,
+    "description": "pour une bonne nuit de sommeil",
+    "imageUrl": "https://media.carrefour.fr/medias/d7f9d3995ac932c6b27445850c2254c5/p_540x540/8712100671753-photosite-20170524-161507-0.jpg"
+}
+{
+    "title": "jus de pomme",
+    "price": 150,
+    "description": "Très bon pour la santé",
+    "imageUrl": "https://media.carrefour.fr/medias/df0811293d883f75bed96459cd9637a4/p_540x540/3560070820597-photosite-20200707-170143-0.jpg"
+}

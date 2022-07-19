@@ -13,8 +13,8 @@ https://docs.microsoft.com/fr-fr/powershell/module/microsoft.powershell.core/abo
 • "Set-ExecutionPolicy Restricted"   remettre
 
 activer l'environement virtuel=
-• "flaskdb2/Scripts/activate"(windows)
-• "source flask_db/bin/activate"(linux)
+• "<nom_env>/Scripts/activate"(windows)
+• "source <nom_env>/bin/activate"(linux)
 fermer l'environeùent virtuel=
 • "deactivate"
 
@@ -39,3 +39,7 @@ docker ps -a
 docker image ls
 docker start
 docker stop
+constuire l'image:
+docker build -t <nomDeLImage> .
+créer mon container avec mon image:
+docker run -d -p 3000:3000 --name <nomcontainer> <nomimage> 
