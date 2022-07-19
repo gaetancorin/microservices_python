@@ -22,6 +22,7 @@ def getAllDrinks():
 # GET ONLY ONE DRINK
 @app.route("/getOneDrink/<titleDrink>", methods=["GET"])
 def getOneDrink(titleDrink):
+    titleDrink = titleDrink.replace("_", " ")
     drink = Drink.objects(title = titleDrink )
     return make_response(drink.to_json(), 200)
 
