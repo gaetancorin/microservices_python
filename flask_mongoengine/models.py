@@ -1,6 +1,4 @@
 from mongoengine import *
-# unique=True
-
 
 class Drink(Document):
     _id = StringField(max_length=200)
